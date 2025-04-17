@@ -19,6 +19,8 @@ Route::get('/', function () {
     Route::get('/users/edit/{post}', [UserController::class, 'edit'])->name('users.edit');
     Route::put('/users/{post}', [UserController::class, 'update'])->name('users.update');
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
+
+    
 });
 
 Route::middleware('guest')->group(function () {
