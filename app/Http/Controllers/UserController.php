@@ -62,6 +62,7 @@ class UserController extends Controller
             $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
             $filePath = $file->storeAs('images', $fileName, 'public');
 
+            
             $user->image = $filePath;
             $user->save();
         }
